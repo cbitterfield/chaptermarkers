@@ -20,31 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4c93c2d-abbe-49fa-8327-854612438a43" name="Default Changelist" comment="Initial commit and fixed setup.py">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/chaptermarkers.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/chaptermarkers.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../docs/chaptermarkers.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../docs/modules.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../examples/chapters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CHANGELOG.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../CHANGELOG.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CONTRIBUTING.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../CONTRIBUTING.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../README.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chaptermarkers/chaptermarkers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chaptermarkers/chaptermarkers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docs/usage.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/usage.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../requirements/dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements/dev.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.bumpversion.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../.bumpversion.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chaptermarkers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chaptermarkers/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

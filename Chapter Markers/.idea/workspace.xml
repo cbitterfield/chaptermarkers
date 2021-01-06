@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4c93c2d-abbe-49fa-8327-854612438a43" name="Default Changelist" comment="Initial commit and fixed setup.py">
-      <change beforePath="$PROJECT_DIR$/../.bumpversion.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../.bumpversion.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chaptermarkers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chaptermarkers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

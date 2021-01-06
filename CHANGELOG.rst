@@ -9,13 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add docker image
-- Integrate bumpversion
-- Integrate robotframework
-- Integrate sphinx-doc
-- Add pylint
-- Add dummy unit test and refactor makefile
-- Refactor requirements structure
-- Add initial boilerplate from Cookiecutter
+- 0.1.0 Initial Release
 
 [Unrelease] TBD-link

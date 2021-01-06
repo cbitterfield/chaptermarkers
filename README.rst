@@ -13,10 +13,11 @@ chaptermarkers
         :target: https://python-boilerplate.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-chaptermarkers contains all the boilerplate you need to create a Python package.
+chaptermarkers will creat chapter markers in MP4 files from a text file.
 
 Get Started!
---------
+-----------------------
+
 Here’s how to set up *chaptermarkers* for local environment.
 
 1- Clone the *chaptermarkers* locally:
@@ -42,10 +43,29 @@ Here’s how to set up *chaptermarkers* for local environment.
     $ deactivate
 
 
+Usage:
+------------------
+usage: chaptermarkers [-h] [--version] [-d] [-f CHAPTERS] [-m FILENAME] [-o OUTPUT] [-t TITLE]
+
+Chapter markers creates markers in MP4 files from friendly time marks
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  -d, --debug           Turn on Debugging Mode
+  -f CHAPTERS, --chapters-file CHAPTERS
+                        Text file with chapters in it. TimeStamp space Title
+  -m FILENAME, --mpeg-video FILENAME
+                        Movie file MP4s only -- Currently no checking
+  -o OUTPUT, --mpeg-video-markers OUTPUT
+                        default is FILENAME_chapters.mp4
+  -t TITLE, --title TITLE
+                        default is Galaxy Entertainment Movie, this is the title that will show when playing
+
+The default value for FFMPEGCMD is /opt/local/bin/ffmpeg [MAC Ports]. If your binary is in a different location use export FFMPEG=/usr/bin/ffmpeg or
+whatever is appropriate for your shell Temp files are written to /tmp and are remove if successful write occurs
+
+
 Credits
 -------
 
-This package was generated using Yeoman_ and Cookiecutter_ projects.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _Yeoman: https://yeoman.io/learning/

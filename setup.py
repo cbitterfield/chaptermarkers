@@ -3,7 +3,7 @@
 
 """The setup script."""
 
-__author__ = 'fgriberi'
+__author__ = 'Colin Bitterfield'
 
 import io
 import pip
@@ -16,8 +16,7 @@ except ImportError: # for pip <= 9.0.3
 from setuptools import setup, find_packages
 
 PACKAGE_NAME = 'chaptermarkers'
-DESCRIPTION = 'chaptermarkers contains all the '\
-              'boilerplate you need to create a Python package.'
+DESCRIPTION = 'chaptermarkers writes markers to MP4 files.'
 
 
 def read(*filenames, **kwargs):
@@ -34,7 +33,7 @@ def read(*filenames, **kwargs):
 def get_parsed_req(req_file):
     """Gets requirement from file"""
     parsed_req = parse_requirements(req_file, session=False)
-    return (str(ir.req) for ir in parsed_req)
+    return (str(ir.requirement) for ir in parsed_req)
 
 
 REQUIREMENTS = get_parsed_req('requirements/prod.txt')
@@ -59,17 +58,15 @@ setup(
     url='https://github.com/cbitterfield/chaptermarkers.git',
     zip_safe=False,
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Environment :: Console',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],

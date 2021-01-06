@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4c93c2d-abbe-49fa-8327-854612438a43" name="Default Changelist" comment="Initial commit and fixed setup.py">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/chaptermarkers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/chaptermarkers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chaptermarkers/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docs/chaptermarkers.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docs/modules.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examples/chapters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CHANGELOG.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../CHANGELOG.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CONTRIBUTING.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../CONTRIBUTING.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../LICENSE.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chaptermarkers/chaptermarkers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chaptermarkers/chaptermarkers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/usage.rst" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/usage.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements/dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements/dev.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../setup.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="a020bc29-ebc3-400a-8ba5-a74e0afc4aef" />
+  <component name="ProjectId" id="1mgAio13a2wPnGxQA55C5NnTAvF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4c93c2d-abbe-49fa-8327-854612438a43" name="Default Changelist" comment="" />
+      <created>1609904989513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609904989513</updated>
+      <workItem from="1609904990672" duration="836000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit and fixed setup.py">
+      <created>1609905137824</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609905137824</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit and fixed setup.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit and fixed setup.py" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="512" y="94" key="#Project_Structure" timestamp="1609905095227">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="512" y="94" key="#Project_Structure/0.0.2560.1440/2560.285.1792.1120@0.0.2560.1440" timestamp="1609905095227" />
+    <state x="680" y="332" key="Vcs.Push.Dialog.v2" timestamp="1609905141905">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="680" y="332" key="Vcs.Push.Dialog.v2/0.0.2560.1440/2560.285.1792.1120@0.0.2560.1440" timestamp="1609905141905" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

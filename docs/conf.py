@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'chaptermarkers'
-copyright = u'2018, Colin Bitterfield'
+copyright = u'2021, Colin Bitterfield'
 author = u'Colin Bitterfield'
 
 # The version info for the project you're documenting, acts as replacement

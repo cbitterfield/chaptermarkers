@@ -9,7 +9,7 @@ python:
 
 
 install:
-  - pip install -r requirements/dev.txt
+  - pip install -r requirements/prod.txt
 
 script:
   - make utest

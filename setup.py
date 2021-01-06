@@ -43,7 +43,7 @@ SETUP_REQUIREMENTS = ['pytest-runner==4.2']
 
 setup(
     name=PACKAGE_NAME,
-    version='0.5.0',
+    version='1.0.0',
     author='Colin Bitterfield',
     author_email='cbitterfield@gmail.com',
     description=DESCRIPTION,

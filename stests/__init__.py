@@ -2,5 +2,5 @@
 
 """Top-level package for Python Boilerplate."""
 
-__author__ = 'Franco Riberi'
-__email__ = 'fgriberi@gmail.com'
+__author__ = 'Colin Bitterfield'
+__email__ = 'cbitterfield@gmail.com'

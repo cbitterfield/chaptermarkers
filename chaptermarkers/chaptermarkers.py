@@ -16,24 +16,24 @@ from datetime import datetime
 import subprocess
 
 
-version     = '0.1.0'
+version = '0.5.0'
 __version__ = version
-program     = 'chaptermarkers'
+program = 'chaptermarkers'
 description = 'Chapter markers creates markers in MP4 files from friendly time marks'
-epilog      = '''
+epilog = '''
 The default value for FFMPEGCMD is /opt/local/bin/ffmpeg [MAC Ports].
 If your binary is in a different location use
 export FFMPEG=/usr/bin/ffmpeg or whatever is appropriate for your shell
 Temp files are written to /tmp and are remove if successful write occurs
 '''
 
-DEBUG       = False
-FILENAME    = 'mpeg.mp4'
-CHAPTERS    = 'chapters.txt'
-OUTPUT      = ''
-TEMPFILE    = '/tmp/FFMETADATAFILE'
-TITLE       = ''
-FFMPEGCMD   = ''
+DEBUG = False
+FILENAME = 'mpeg.mp4'
+CHAPTERS = 'chapters.txt'
+OUTPUT = None
+TEMPFILE = '/tmp/FFMETADATAFILE'
+TITLE = None
+FFMPEGCMD = None
 
 # Add this module's location to syspath
 sys.path.insert(0, os.getcwd())
@@ -53,8 +53,6 @@ chapters = list()
 
 def main(args=None):
     """ Main entry point of chapter-markers """
-    FFMPEGCMD   = os.getenv('FFMPEG',  findFFMEG())
-
     config = cli(version=__version__, program=__prog_name__)
     setup(config)
     text = ''
@@ -136,7 +134,7 @@ def cli(**kwargs):
                         action='store',
                         required=False,
                         dest='FILENAME',
-                        default=FILENAME
+                        default="unknown"
                         )
 
     parser.add_argument('-o', '--mpeg-video-markers',
@@ -166,9 +164,17 @@ def setup(configuration):
     global CHAPTERS
     global OUTPUT
     global TITLE
+    global FFMPEGCMD
+
+    FFMPEGCMD = os.getenv('FFMPEG',  findFFMEG())
 
     if configuration.debug:
         DEBUG = configuration.debug
+        print(configuration)
+        print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
+        testFFMPEG = "{ffmpegcmd} -version | head -1".format(ffmpegcmd=FFMPEGCMD)
+        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
+        print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
 
     if not os.path.isfile(configuration.FILENAME):
         print('Movie Filename {filename} is missing'.format(filename=configuration.FILENAME))
@@ -183,7 +189,7 @@ def setup(configuration):
         CHAPTERS = configuration.CHAPTERS
     OUTPUT = configuration.OUTPUT
     TITLE = configuration.TITLE
-    print(configuration)
+
 
 
 def writeMetada(ffmetadata, video, output):

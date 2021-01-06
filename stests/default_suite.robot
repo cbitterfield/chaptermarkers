@@ -4,8 +4,8 @@
 #
 
 *** Settings ***
-Documentation       *Arguments Suite for _Default Execution_*
-Metadata    Github  https://github.com/toptive/python_boilerplate
+Documentation       *Test Chapter Markers runs but has error in filename*
+Metadata    Github  https://github.com/cbitterfield/chaptermarkers
 
 # External libraries imports
 Library  Process
@@ -14,11 +14,11 @@ Library  String
 Resource    common_resources.robot
 
 *** Variables ***
-${EXPECTED_MESSAGE}    Hello World
+${EXPECTED_MESSAGE}  Movie Filename
 
 *** Test Cases ***
-Scenario: Python Boilerplate it is executed without errors
-    [Documentation]     Verifies that python_boilerplate is executed well and without errors
-    ${result}=  Run process     ${BOILERPLATE_EXEC}
+Scenario: chaptermarkers is executed
+    [Documentation]     Verifies that chaptermarkers is executed well and without errors
+    ${result}=  Run process  ${CHAPTERMARKERS_EXEC}  shell=true
     Should Contain  ${result.stdout}    ${EXPECTED_MESSAGE}
     Should Be Empty     ${result.stderr}

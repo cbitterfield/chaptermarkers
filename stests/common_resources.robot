@@ -7,7 +7,7 @@
 Library  OperatingSystem
 
 *** Variables ***
-${BOILERPLATE_EXEC}  chaptermarkers
+${CHAPTERMARKERS_EXEC}  chaptermarkers
 
 *** Keywords ***
 # TODO

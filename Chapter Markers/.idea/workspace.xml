@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4c93c2d-abbe-49fa-8327-854612438a43" name="Default Changelist" comment="Initial commit and fixed setup.py">
-      <change beforePath="$PROJECT_DIR$/../.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stests/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609904989513</updated>
       <workItem from="1609904990672" duration="836000" />
+      <workItem from="1609913803021" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and fixed setup.py">
       <created>1609905137824</created>
@@ -77,6 +80,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit and fixed setup.py" />

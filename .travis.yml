@@ -1,0 +1,18 @@
+language: python
+python:
+  - 3.9
+  - 3.8
+  - 3.7
+  - 3.6
+  - 3.5
+  - 3.4
+
+
+install:
+  - pip install -r requirements/dev.txt
+
+script:
+  - make utest
+  - sudo make install
+  - make stest
+  - sudo make uninstall

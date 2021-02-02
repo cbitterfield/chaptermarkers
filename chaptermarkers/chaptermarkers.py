@@ -16,7 +16,7 @@ from datetime import datetime
 import subprocess
 
 
-version = '1.0.0'
+version = '1.1.0'
 __version__ = version
 program = 'chaptermarkers'
 description = 'Chapter markers creates markers in MP4 files from friendly time marks'

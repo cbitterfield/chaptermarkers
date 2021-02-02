@@ -60,7 +60,7 @@ optional arguments:
   -o OUTPUT, --mpeg-video-markers OUTPUT
                         default is FILENAME_chapters.mp4
   -t TITLE, --title TITLE
-                        default is Galaxy Entertainment Movie, this is the title that will show when playing
+                        default is My Default Movie, this is the title that will show when playing
 
 The default value for FFMPEGCMD is /opt/local/bin/ffmpeg [MAC Ports]. If your binary is in a different location use export FFMPEG=/usr/bin/ffmpeg or
 whatever is appropriate for your shell Temp files are written to /tmp and are remove if successful write occurs

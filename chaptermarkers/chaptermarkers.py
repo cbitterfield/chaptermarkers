@@ -123,7 +123,7 @@ def cli(**kwargs):
                         help='Text file with chapters in it. TimeStamp space Title',
                         type=str,
                         action='store',
-                        required=False,
+                        required=True,
                         dest='CHAPTERS',
                         default=CHAPTERS
                         )
@@ -132,7 +132,7 @@ def cli(**kwargs):
                         help='Movie file MP4s only -- Currently no checking',
                         type=str,
                         action='store',
-                        required=False,
+                        required=True,
                         dest='FILENAME',
                         default="unknown"
                         )
@@ -146,14 +146,23 @@ def cli(**kwargs):
                         default=FILENAME + "_chapters.mp4"
                         )
     parser.add_argument('-t', '--title',
-                        help='''default is Galaxy Entertainment Movie,
+                        help='''default is My Default Movie,
                              this is the title that will show when playing''',
                         type=str,
                         action='store',
                         required=False,
                         dest='TITLE',
-                        default="Galaxy Entertainment Movie"
+                        default="My Default Movie"
                         )
+
+    parser.add_argument('--test',
+                        help='''test if ffmpeg is installed and the program runs,''',
+                        action='store_true',
+                        required=False,
+                        dest='testProgram',
+                        default=False
+                        )
+
     parse_out = parser.parse_args()
     return parse_out
 
@@ -167,12 +176,18 @@ def setup(configuration):
     global FFMPEGCMD
 
     FFMPEGCMD = os.getenv('FFMPEG',  findFFMEG())
+    testFFMPEG = "{ffmpegcmd} -version | head -1".format(ffmpegcmd=FFMPEGCMD)
+
+    if configuration.testProgram:
+        print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
+        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
+        print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
+        exit(0)
 
     if configuration.debug:
         DEBUG = configuration.debug
         print(configuration)
         print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
-        testFFMPEG = "{ffmpegcmd} -version | head -1".format(ffmpegcmd=FFMPEGCMD)
         resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
         print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
 

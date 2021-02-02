@@ -55,6 +55,7 @@ setup(
     include_package_data=True,
     setup_requires=SETUP_REQUIREMENTS,
     test_suite='tests',
+    python_requires='>=3',
     url='https://github.com/cbitterfield/chaptermarkers.git',
     zip_safe=False,
     classifiers=[

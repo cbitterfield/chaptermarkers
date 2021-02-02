@@ -7,7 +7,8 @@
 Library  OperatingSystem
 
 *** Variables ***
-${CHAPTERMARKERS_EXEC}  chaptermarkers
+${CHAPTERMARKERS_EXEC}  chaptermarkers/chaptermarkers.py
+${LOG LEVEL}    DEBUG
 
 *** Keywords ***
 # TODO

@@ -94,7 +94,8 @@ def main(args=None):
 
         with open(TEMPFILE, "w") as myfile:
             myfile.write(text)
-
+    if DEBUG:
+        print("Adding chapter markers to {filename} writing changes to {output}".format(filename=FILENAME,output=OUTPUT))
     writeMetada(TEMPFILE, FILENAME, OUTPUT)
 
     return 0
@@ -208,7 +209,7 @@ def setup(configuration):
 
 
 def writeMetada(ffmetadata, video, output):
-    TEMPLATE = "{FFMPEG} -hide_banner -i {INPUT} -i {FFMETADATAFILE} -map_metadata 1 -codec copy {OUTPUT} -y".\
+    TEMPLATE = "{FFMPEG} -hide_banner -i '{INPUT}' -i {FFMETADATAFILE} -map_metadata 1 -codec copy '{OUTPUT}' -y".\
         format(FFMPEG=FFMPEGCMD, FFMETADATAFILE=ffmetadata, INPUT=video, OUTPUT=output)
     subprocess.run(TEMPLATE, shell=True)
     if DEBUG:

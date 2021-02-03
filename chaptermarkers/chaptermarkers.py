@@ -64,10 +64,10 @@ def main(args=None):
 
     with open(CHAPTERS, 'r') as f:
         for line in f:
-            x = re.match(r"(\d):(\d{2}):(\d{2}) (.*)", line)
+            x = re.match(r"(\d{1,2}):(\d{2}):(\d{2}.\d{1,5}) (.*)", line)
             hrs = int(x.group(1))
             mins = int(x.group(2))
-            secs = int(x.group(3))
+            secs = float(x.group(3))
             title = x.group(4)
 
             minutes = (hrs * 60) + mins

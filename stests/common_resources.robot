@@ -9,7 +9,7 @@ Library  Process
 Library  String
 
 *** Variables ***
-${CHAPTERMARKERS_EXEC}  chaptermarkers
+${CHAPTERMARKERS_EXEC}  chaptermarkers.py
 ${LOG LEVEL}    DEBUG
 ${test}     --test
 ${EXPECTED_MESSAGE}  ffmpeg version

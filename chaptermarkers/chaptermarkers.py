@@ -16,7 +16,7 @@ from datetime import datetime
 import subprocess
 
 
-version = '1.2.3'
+version = '1.2.4'
 __version__ = version
 program = 'chaptermarkers'
 description = 'Chapter markers creates markers in MP4 files from friendly time marks'
@@ -91,12 +91,13 @@ def main(args=None):
         title = chap['title']
         start = chap['startTime']
         end = chapters[i + 1]['startTime'] - 1
-        text += f"[CHAPTER]\nTIMEBASE=1/1000\nSTART={start}\nEND={end}\ntitle={title}\n\n"
+        text += f"""[CHAPTER]\nTIMEBASE=1/1000\nSTART={start}\nEND={end}\ntitle={title}\n\n"""
 
         with open(TEMPFILE, "w") as myfile:
             myfile.write(text)
     if DEBUG and not TEST:
-        print("Adding chapter markers to {filename} writing changes to {output}".format(filename=FILENAME,output=OUTPUT))
+        print("Adding chapter markers to {filename} writing changes to {output}"
+              .format(filename=FILENAME, output=OUTPUT))
     writeMetada(TEMPFILE, FILENAME, OUTPUT)
 
     return 0
@@ -184,7 +185,7 @@ def setup(configuration):
     if configuration.testProgram:
         TEST = True
         # Create a test file in /tmp and assign a /dev/null output
-        with open('/tmp/chapters.txt','w') as example:
+        with open('/tmp/chapters.txt', 'w') as example:
             example.write("""
 0:00:20 Start
 0:10:30 First Performance
@@ -195,7 +196,7 @@ def setup(configuration):
             """)
         example.close()
         print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
-        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
+        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True, stdout=subprocess.PIPE)
         print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
         exit(0)
 
@@ -203,7 +204,7 @@ def setup(configuration):
         DEBUG = configuration.debug
         print(configuration)
         print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
-        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
+        resultsFFMPEG = subprocess.run(testFFMPEG, shell=True, stdout=subprocess.PIPE)
         print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
 
     if not os.path.isfile(configuration.FILENAME):
@@ -223,7 +224,6 @@ def setup(configuration):
     TITLE = configuration.TITLE
 
 
-
 def writeMetada(ffmetadata, video, output):
     TEMPLATE = "{FFMPEG} -hide_banner -i '{INPUT}' -i {FFMETADATAFILE} -map_metadata 1 -codec copy '{OUTPUT}' -y".\
         format(FFMPEG=FFMPEGCMD, FFMETADATAFILE=ffmetadata, INPUT=video, OUTPUT=output)
@@ -232,13 +232,15 @@ def writeMetada(ffmetadata, video, output):
         print("TEMPLATE: {template}".format(template=TEMPLATE))
     pass
 
+
 def findFFMEG(**args):
     localFFMPEG = None
-    locations = ['/opt/local/bin','/usr/local/bin','/usr/local/ffmpeg', '/usr/local/opt/']
+    locations = ['/opt/local/bin', '/usr/local/bin', '/usr/local/ffmpeg', '/usr/local/opt/']
     for location in locations:
-        if os.path.isfile("/".join([location,'ffmpeg'])):
-            localFFMPEG="/".join([location,'ffmpeg'])
+        if os.path.isfile("/".join([location, 'ffmpeg'])):
+            localFFMPEG = "/".join([location, 'ffmpeg'])
     return localFFMPEG
+
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """

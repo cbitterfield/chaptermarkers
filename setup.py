@@ -11,7 +11,7 @@ import pip
 try: # for pip >= 10
     from pip._internal.req import parse_requirements
 except ImportError: # for pip <= 9.0.3
-    from pip.req import parse_requirements
+    from pip.req import parse_requirement
 
 from setuptools import setup, find_packages
 
@@ -43,7 +43,7 @@ SETUP_REQUIREMENTS = ['pytest-runner==4.2']
 
 setup(
     name=PACKAGE_NAME,
-    version='1.2.3',
+    version='1.2.4',
     author='Colin Bitterfield',
     author_email='cbitterfield@gmail.com',
     description=DESCRIPTION,

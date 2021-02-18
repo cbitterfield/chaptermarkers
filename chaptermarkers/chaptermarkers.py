@@ -34,6 +34,7 @@ OUTPUT = None
 TEMPFILE = '/tmp/FFMETADATAFILE'
 TITLE = None
 FFMPEGCMD = None
+TEST = False
 
 # Add this module's location to syspath
 sys.path.insert(0, os.getcwd())
@@ -90,11 +91,11 @@ def main(args=None):
         title = chap['title']
         start = chap['startTime']
         end = chapters[i + 1]['startTime'] - 1
-        text += f"""[CHAPTER]\nTIMEBASE=1/1000\nSTART={start}\nEND={end}\ntitle={title}\n\n"""
+        text += f"[CHAPTER]\nTIMEBASE=1/1000\nSTART={start}\nEND={end}\ntitle={title}\n\n"
 
         with open(TEMPFILE, "w") as myfile:
             myfile.write(text)
-    if DEBUG:
+    if DEBUG and not TEST:
         print("Adding chapter markers to {filename} writing changes to {output}".format(filename=FILENAME,output=OUTPUT))
     writeMetada(TEMPFILE, FILENAME, OUTPUT)
 
@@ -124,7 +125,7 @@ def cli(**kwargs):
                         help='Text file with chapters in it. TimeStamp space Title',
                         type=str,
                         action='store',
-                        required=True,
+                        required=False,
                         dest='CHAPTERS',
                         default=CHAPTERS
                         )
@@ -133,7 +134,7 @@ def cli(**kwargs):
                         help='Movie file MP4s only -- Currently no checking',
                         type=str,
                         action='store',
-                        required=True,
+                        required=False,
                         dest='FILENAME',
                         default="unknown"
                         )
@@ -175,11 +176,24 @@ def setup(configuration):
     global OUTPUT
     global TITLE
     global FFMPEGCMD
+    global TEST
 
     FFMPEGCMD = os.getenv('FFMPEG',  findFFMEG())
     testFFMPEG = "{ffmpegcmd} -version | head -1".format(ffmpegcmd=FFMPEGCMD)
 
     if configuration.testProgram:
+        TEST = True
+        # Create a test file in /tmp and assign a /dev/null output
+        with open('/tmp/chapters.txt','w') as example:
+            example.write("""
+0:00:20 Start
+0:10:30 First Performance
+0:20:56 Break
+0:30:44 Second Performance
+0:35:45 Crowd Shots
+0:40:45 Credits
+            """)
+        example.close()
         print('FFMPEG Location: {ffmpeg}'.format(ffmpeg=FFMPEGCMD))
         resultsFFMPEG = subprocess.run(testFFMPEG, shell=True,stdout=subprocess.PIPE)
         print("FFMPEG VERSION: {ffmpegVersion}".format(ffmpegVersion=resultsFFMPEG.stdout.decode("utf-8")))
@@ -194,12 +208,14 @@ def setup(configuration):
 
     if not os.path.isfile(configuration.FILENAME):
         print('Movie Filename {filename} is missing'.format(filename=configuration.FILENAME))
+        print('Run chaptermarkers -h for additional information')
         exit(1)
     else:
         FILENAME = configuration.FILENAME
 
     if not configuration.CHAPTERS:
         print('Chapters File {chapters} is missing'.format(chapters=configuration.CHAPTERS))
+        print('Run chaptermarkers -h for additional information')
         exit(1)
     else:
         CHAPTERS = configuration.CHAPTERS

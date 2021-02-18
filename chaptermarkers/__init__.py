@@ -4,4 +4,4 @@
 
 __author__ = 'Colin Bitterfield'
 __email__ = 'cbitterfield@gmail.com'
-__version__ = '1.2.6'
+__version__ = '1.2.7'

@@ -4,8 +4,7 @@ python:
   - 3.8
   - 3.7
   - 3.6
-  - 3.5
-  - 3.4
+
 
 
 install:
@@ -14,5 +13,5 @@ install:
 script:
   - make utest
   - sudo make install
-  - make stest
+#  - make stest
   - sudo make uninstall
